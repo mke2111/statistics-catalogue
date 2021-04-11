@@ -13,7 +13,7 @@ const AllLists = () => (
           <p>is life</p>
         </div>
       </div>
-      <div className="d-flex flex-row justify-content-between">
+      {/* <div className="d-flex flex-row justify-content-between">
         <div className="col3">
           <h4>Life</h4>
           <p>is life</p>
@@ -32,8 +32,8 @@ const AllLists = () => (
           <h4>Life2</h4>
           <p>is life</p>
         </div>
-      </div>
-      <div className="d-flex flex-row justify-content-between">
+      </div> */}
+      {/* <div className="d-flex flex-row justify-content-between">
         <div className="col3">
           <h4>Life</h4>
           <p>is life</p>
@@ -42,7 +42,7 @@ const AllLists = () => (
           <h4>Life2</h4>
           <p>is life</p>
         </div>
-      </div>
+      </div> */}
     </section>
   </>
 );
