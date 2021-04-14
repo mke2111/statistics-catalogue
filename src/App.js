@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Routes from './Routes';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import fetchStocks from './Actions';
+import { fetchStock } from './Actions';
 
-const App = ({ fetchStocks }) => {
-  useEffect(() => fetchStocks(), []);
+const App = ({ fetchStock }) => {
+  useEffect(() => fetchStock(), []);
   return (
     <div className="app">
       <Routes />
@@ -16,7 +16,7 @@ const App = ({ fetchStocks }) => {
 };
 
 App.propTypes = {
-  fetchStocks: PropTypes.func.isRequired,
+  fetchStock: PropTypes.func.isRequired,
 };
 
-export default connect(null, { fetchStocks })(App);
+export default connect(null, { fetchStock })(App);

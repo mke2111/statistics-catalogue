@@ -1,14 +1,14 @@
 import React from 'react';
-import AllLists from '../Components/allLists';
 import Main from '../Components/main';
 import Navbar from '../Components/navbar';
+import StockList from '../Containers/stocklist';
 
 const Home = () => (
   <>
     <div>
       <Navbar />
       <Main />
-      <AllLists />
+      <StockList />
     </div>
   </>
 );
