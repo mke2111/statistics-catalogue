@@ -4,6 +4,8 @@ export const STOCK_REQUEST = 'STOCK_REQUEST';
 export const STOCK_SUCCESS = 'STOCK_SUCCESS';
 export const STOCK_FAILURE = 'STOCK_FAILURE';
 
+const url = 'https://financialmodelingprep.com/api/v3/quotes/crypto?apikey=c9576c43313a8d36d1d6049b18a12180';
+
 export const fetchStockRequest = () => ({
   type: STOCK_REQUEST,
 });
@@ -21,7 +23,7 @@ export const fetchStockFailure = (error) => ({
 export const fetchStock = () => (dispatch) => {
   dispatch(fetchStockRequest());
   axios
-    .get('https://financialmodelingprep.com/api/v3/quotes/index?apikey=c9576c43313a8d36d1d6049b18a12180')
+    .get(url)
     .then((response) => {
       // response.data is the users
       const stocks = response.data;

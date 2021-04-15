@@ -1,3 +1,5 @@
+/* eslint-disable no-return-assign */
+/* eslint-disable func-names */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-nested-ternary */
@@ -10,16 +12,15 @@ function StockList({ fetchStock, stockData }) {
     fetchStock();
   }, []);
   return stockData.loading ? (
-    <h2>Loading</h2>
+    <h2>Loading................</h2>
   ) : stockData.error ? (
     <h2>{stockData.error}</h2>
   ) : (
     <div>
-      <h2>Sto List</h2>
-      <div>
+      <div className="grid-list">
         {stockData
           && stockData.stocks
-          && stockData.stocks.map((stock) => <p>{stock.name}</p>)}
+              && stockData.stocks.map((stock) => <p className="p-2 main">{ stock.name }</p>)}
       </div>
     </div>
   );

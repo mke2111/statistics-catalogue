@@ -16,7 +16,6 @@ code {
   width: 500px;
   margin: 20px auto;
   border: 2px solid green;
-  height: 600px;
 }
 
 .col {
@@ -43,6 +42,16 @@ code {
   // };  */
 
 .main {
-  height: 150px;
   border: 1px solid yellow;
+}
+
+.grid-list {
+  width: 500px;
+  box-shadow: inset 0 4px 5px 0 black;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: #bebec0;
+  min-height: 90vh;
+  gap: 20px;
 }
