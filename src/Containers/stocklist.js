@@ -20,7 +20,12 @@ function StockList({ fetchStock, stockData }) {
       <div className="grid-list">
         {stockData
           && stockData.stocks
-              && stockData.stocks.map((stock) => <p className="p-2 main">{ stock.name }</p>)}
+              && stockData.stocks.map((stock) => (
+                <a className="p-2 main" href="https://financialmodelingprep.com/api/v3/profile/AAPL?apikey=c9576c43313a8d36d1d6049b18a12180">
+                  <p>{ stock.name }</p>
+                  { stock.price }
+                </a>
+              ))}
       </div>
     </div>
   );
