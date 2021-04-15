@@ -7,9 +7,11 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchStock } from '../Actions';
 
+const url = 'https://financialmodelingprep.com/api/v3/quotes/crypto?apikey=c9576c43313a8d36d1d6049b18a12180';
+
 function StockList({ fetchStock, stockData }) {
   useEffect(() => {
-    fetchStock();
+    fetchStock(url);
   }, []);
   return stockData.loading ? (
     <h2>Loading................</h2>
@@ -36,7 +38,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchStock: () => dispatch(fetchStock()),
+  fetchStock: (url) => dispatch(fetchStock(url)),
 });
 
 export default connect(

@@ -7,7 +7,7 @@ export const CHANGE_FILTER = 'CHANGE_FILTER';
 
 export const changeFilter = (filter) => ({ type: CHANGE_FILTER, filter });
 
-const url = 'https://financialmodelingprep.com/api/v3/quotes/crypto?apikey=c9576c43313a8d36d1d6049b18a12180';
+// const url = 'https://financialmodelingprep.com/api/v3/quotes/crypto?apikey=c9576c43313a8d36d1d6049b18a12180';
 
 export const fetchStockRequest = () => ({
   type: STOCK_REQUEST,
@@ -23,7 +23,7 @@ export const fetchStockFailure = (error) => ({
   payload: error,
 });
 
-export const fetchStock = () => (dispatch) => {
+export const fetchStock = (url) => (dispatch) => {
   dispatch(fetchStockRequest());
   axios
     .get(url)
