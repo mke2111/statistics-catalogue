@@ -4,6 +4,7 @@ export const STOCK_REQUEST = 'STOCK_REQUEST';
 export const STOCK_SUCCESS = 'STOCK_SUCCESS';
 export const STOCK_FAILURE = 'STOCK_FAILURE';
 export const CHANGE_FILTER = 'CHANGE_FILTER';
+export const CO_PROFILE = 'CO_PROFILE';
 
 export const changeFilter = (filter) => ({ type: CHANGE_FILTER, filter });
 
@@ -11,6 +12,10 @@ export const changeFilter = (filter) => ({ type: CHANGE_FILTER, filter });
 
 export const fetchStockRequest = () => ({
   type: STOCK_REQUEST,
+});
+
+export const fetchProfile = () => ({
+  type: CO_PROFILE,
 });
 
 export const fetchStockSuccess = (stocks) => ({
@@ -24,6 +29,21 @@ export const fetchStockFailure = (error) => ({
 });
 
 export const fetchStock = (url) => (dispatch) => {
+  dispatch(fetchStockRequest());
+  axios
+    .get(url)
+    .then((response) => {
+      // response.data is the users
+      const stocks = response.data;
+      dispatch(fetchStockSuccess(stocks));
+    })
+    .catch((error) => {
+      // error.message is the error message
+      dispatch(fetchStockFailure(error.message));
+    });
+};
+
+export const fetchCoProfile = (url) => (dispatch) => {
   dispatch(fetchStockRequest());
   axios
     .get(url)
