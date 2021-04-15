@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const categories = ['Pizza', 'Pasta', 'Spaghetti', 'Couscous', 'Noodles', 'Sauce', 'Candy'];
+const categories = ['crypto', 'forex', 'commodity', 'index', 'nyse'];
 
 const getCategories = () => {
   const result = [];

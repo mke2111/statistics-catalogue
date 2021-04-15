@@ -1,17 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Filter from './filter';
 
-const Main = () => (
+const Main = ({ updateFilter, filter }) => (
   <>
-    <div className="main">
+    <div className="main d-flex flex-row justify-content-around py-4">
       <h3 className="te">Business</h3>
       <label htmlFor="filterSel">
-        Filter
-        <select>
-          <option key="si" value="si">Select</option>
-        </select>
+        {/* Filter */}
+        <Filter updateFilter={updateFilter} filter={filter} />
       </label>
     </div>
   </>
 );
+
+Main.propTypes = {
+  updateFilter: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
+};
 
 export default Main;
