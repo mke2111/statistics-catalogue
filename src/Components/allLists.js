@@ -3,14 +3,11 @@ import PropTypes from 'prop-types';
 
 function StockCard({ stock }) {
   return (
-    <div className="size">
+    <div className="size main">
       <p>{stock.ticker}</p>
-      <p>{stock.companyName}</p>
+      <a href={`\\stock\\${stock.ticker}`} className=" w-100"><p>{stock.companyName}</p></a>
       <p>{stock.price}</p>
       <p>{stock.currency}</p>
-      <div className="mt-auto">
-        <a href={`\\stock\\${stock.ticker}`} className="btn btn-outline-success w-100">Details</a>
-      </div>
     </div>
   );
 }
