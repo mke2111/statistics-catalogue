@@ -1,50 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const AllLists = () => (
-  <>
-    <section className="d-flex flex-column justify-content-between col2">
-      <div className="d-flex flex-row justify-content-between">
-        <div className="col3">
-          <h4><a href="./item">Life</a></h4>
-          <p>is life</p>
-        </div>
-        <div className="col3">
-          <h4>Life2</h4>
-          <p>is life</p>
-        </div>
+function StockCard({ stock }) {
+  return (
+    <div className="size">
+      <p>{stock.ticker}</p>
+      <p>{stock.companyName}</p>
+      <p>{stock.price}</p>
+      <p>{stock.currency}</p>
+      <div className="mt-auto">
+        <a href={`\\stock\\${stock.ticker}`} className="btn btn-outline-success w-100">Details</a>
       </div>
-      {/* <div className="d-flex flex-row justify-content-between">
-        <div className="col3">
-          <h4>Life</h4>
-          <p>is life</p>
-        </div>
-        <div className="col3">
-          <h4>Life2</h4>
-          <p>is life</p>
-        </div>
-      </div>
-      <div className="d-flex flex-row justify-content-between">
-        <div className="col3">
-          <h4>Life</h4>
-          <p>is life</p>
-        </div>
-        <div className="col3">
-          <h4>Life2</h4>
-          <p>is life</p>
-        </div>
-      </div> */}
-      {/* <div className="d-flex flex-row justify-content-between">
-        <div className="col3">
-          <h4>Life</h4>
-          <p>is life</p>
-        </div>
-        <div className="col3">
-          <h4>Life2</h4>
-          <p>is life</p>
-        </div>
-      </div> */}
-    </section>
-  </>
-);
+    </div>
+  );
+}
 
-export default AllLists;
+StockCard.propTypes = {
+  stock: PropTypes.shape({
+    ticker: PropTypes.string.isRequired,
+    companyName: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    currency: PropTypes.string,
+    changesPercentage: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+export default StockCard;

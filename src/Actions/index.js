@@ -6,6 +6,10 @@ export const STOCK_FAILURE = 'STOCK_FAILURE';
 export const CHANGE_FILTER = 'CHANGE_FILTER';
 export const CO_PROFILE = 'CO_PROFILE';
 
+const STOCK_LIST_URL = 'https://financialmodelingprep.com/api/v3/actives?apikey=c9576c43313a8d36d1d6049b18a12180';
+const STOCK_GAINERS = 'https://financialmodelingprep.com/api/v3/gainers?apikey=c9576c43313a8d36d1d6049b18a12180';
+const STOCK_LOSERS = 'https://financialmodelingprep.com/api/v3/losers?apikey=c9576c43313a8d36d1d6049b18a12180';
+
 export const changeFilter = (filter) => ({ type: CHANGE_FILTER, filter });
 
 // const url = 'https://financialmodelingprep.com/api/v3/quotes/crypto?apikey=c9576c43313a8d36d1d6049b18a12180';
@@ -28,7 +32,12 @@ export const fetchStockFailure = (error) => ({
   payload: error,
 });
 
-export const fetchStock = (url) => (dispatch) => {
+export const fetchStock = (urlType) => (dispatch) => {
+  let url = STOCK_LIST_URL;
+  if (urlType === 'active') url = STOCK_LIST_URL;
+  if (urlType === 'gainers') url = STOCK_GAINERS;
+  if (urlType === 'losers') url = STOCK_LOSERS;
+
   dispatch(fetchStockRequest());
   axios
     .get(url)

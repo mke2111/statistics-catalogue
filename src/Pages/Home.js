@@ -1,16 +1,24 @@
 import React from 'react';
-import Main from '../Components/main';
+import { useDispatch } from 'react-redux';
 import Navbar from '../Components/navbar';
 import StockList from '../Containers/stocklist';
+import { fetchStock } from '../Actions';
 
-const Home = () => (
-  <>
-    <div>
-      <Navbar />
-      <Main />
-      <StockList />
-    </div>
-  </>
-);
+const Home = () => {
+  const dispatch = useDispatch();
+  const handleOnSelect = (e) => {
+    dispatch(fetchStock(e.target.value));
+  };
+
+  return (
+    <>
+      <div>
+        <Navbar handleOnSelect={handleOnSelect} />
+        {/* <Main /> */}
+        <StockList />
+      </div>
+    </>
+  );
+};
 
 export default Home;
