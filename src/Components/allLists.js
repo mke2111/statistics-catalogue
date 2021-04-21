@@ -18,7 +18,7 @@ StockCard.propTypes = {
   stock: PropTypes.shape({
     ticker: PropTypes.string,
     symbol: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
+    id: PropTypes.string,
     name: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
     currency: PropTypes.string,

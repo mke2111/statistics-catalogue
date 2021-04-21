@@ -28,7 +28,7 @@ function StockList({ fetchStock, stockData }) {
           && stockData.stocks
               && stockData.stocks.map((stock) => (
                 <StockCard
-                  key={stock.ticker}
+                  key={stock.id}
                   stock={stock}
                 />
               ))}

@@ -6,9 +6,9 @@ export const STOCK_FAILURE = 'STOCK_FAILURE';
 export const CHANGE_FILTER = 'CHANGE_FILTER';
 export const CO_PROFILE = 'CO_PROFILE';
 
-const STOCK_LIST_URL = 'https://financialmodelingprep.com/api/v3/quotes/crypto?apikey=c9576c43313a8d36d1d6049b18a12180';
-const STOCK_GAINERS = 'https://financialmodelingprep.com/api/v3/quotes/index?apikey=c9576c43313a8d36d1d6049b18a12180';
-const STOCK_LOSERS = 'https://financialmodelingprep.com/api/v3/quotes/forex?apikey=c9576c43313a8d36d1d6049b18a12180';
+const STOCK_CRYPTO = 'https://financialmodelingprep.com/api/v3/quotes/crypto?apikey=c9576c43313a8d36d1d6049b18a12180';
+const STOCK_INDEX = 'https://financialmodelingprep.com/api/v3/quotes/index?apikey=c9576c43313a8d36d1d6049b18a12180';
+const STOCK_FOREX = 'https://financialmodelingprep.com/api/v3/quotes/forex?apikey=c9576c43313a8d36d1d6049b18a12180';
 
 export const changeFilter = (filter) => ({ type: CHANGE_FILTER, filter });
 
@@ -33,10 +33,10 @@ export const fetchStockFailure = (error) => ({
 });
 
 export const fetchStock = (urlType) => (dispatch) => {
-  let url = STOCK_LIST_URL;
-  if (urlType === 'crypto') url = STOCK_LIST_URL;
-  if (urlType === 'index') url = STOCK_GAINERS;
-  if (urlType === 'forex') url = STOCK_LOSERS;
+  let url = STOCK_CRYPTO;
+  if (urlType === 'crypto') url = STOCK_CRYPTO;
+  if (urlType === 'index') url = STOCK_INDEX;
+  if (urlType === 'forex') url = STOCK_FOREX;
 
   dispatch(fetchStockRequest());
   axios
