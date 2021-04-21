@@ -11,6 +11,8 @@ const Navbar = ({ handleOnSelect }) => (
           <option value="crypto">CRYPTO </option>
           <option value="index">INDEX </option>
           <option value="forex">FOREX </option>
+          <option value="commodity">COMMODITY </option>
+          <option value="nyse">NYSE </option>
         </Form.Control>
         {/* <Button variant="outline-success">Filter by category</Button> */}
       </Form>

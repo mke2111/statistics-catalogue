@@ -9,10 +9,8 @@ export const CO_PROFILE = 'CO_PROFILE';
 const STOCK_CRYPTO = 'https://financialmodelingprep.com/api/v3/quotes/crypto?apikey=c9576c43313a8d36d1d6049b18a12180';
 const STOCK_INDEX = 'https://financialmodelingprep.com/api/v3/quotes/index?apikey=c9576c43313a8d36d1d6049b18a12180';
 const STOCK_FOREX = 'https://financialmodelingprep.com/api/v3/quotes/forex?apikey=c9576c43313a8d36d1d6049b18a12180';
-
-export const changeFilter = (filter) => ({ type: CHANGE_FILTER, filter });
-
-// const url = 'https://financialmodelingprep.com/api/v3/quotes/crypto?apikey=c9576c43313a8d36d1d6049b18a12180';
+const STOCK_COMMODITY = 'https://financialmodelingprep.com/api/v3/quotes/commodity?apikey=c9576c43313a8d36d1d6049b18a12180';
+const STOCK_NYSE = 'https://financialmodelingprep.com/api/v3/quotes/nyse?apikey=c9576c43313a8d36d1d6049b18a12180';
 
 export const fetchStockRequest = () => ({
   type: STOCK_REQUEST,
@@ -37,6 +35,8 @@ export const fetchStock = (urlType) => (dispatch) => {
   if (urlType === 'crypto') url = STOCK_CRYPTO;
   if (urlType === 'index') url = STOCK_INDEX;
   if (urlType === 'forex') url = STOCK_FOREX;
+  if (urlType === 'commodity') url = STOCK_COMMODITY;
+  if (urlType === 'nyse') url = STOCK_NYSE;
 
   dispatch(fetchStockRequest());
   axios
