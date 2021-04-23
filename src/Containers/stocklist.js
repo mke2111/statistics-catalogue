@@ -1,15 +1,9 @@
-/* eslint-disable no-return-assign */
-/* eslint-disable func-names */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-key */
 /* eslint-disable no-nested-ternary */
 import React, { useEffect } from 'react';
 import { connect, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import StockCard from '../Components/allLists';
 import { fetchStock } from '../Actions';
-
-// const url = 'https://financialmodelingprep.com/api/v3/quotes/crypto?apikey=c9576c43313a8d36d1d6049b18a12180';
 
 function StockList({ fetchStock, stockData }) {
   const url = useSelector((state) => state.urlType);
@@ -28,7 +22,7 @@ function StockList({ fetchStock, stockData }) {
           && stockData.stocks
               && stockData.stocks.map((stock) => (
                 <StockCard
-                  key={stock.id}
+                  key={stock.ticker}
                   stock={stock}
                 />
               ))}

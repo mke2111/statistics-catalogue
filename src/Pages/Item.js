@@ -1,14 +1,14 @@
 import React from 'react';
 import Info from '../Containers/info';
-import ItemInfo from '../Components/itemInfo';
-import Navbar from '../Components/navbar';
+// import ItemInfo from '../Components/itemInfo';
+// import Navbar from '../Components/navbar';
 
 const Home = () => (
   <>
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
+      {/* <ItemInfo /> */}
       <Info />
-      <ItemInfo />
     </div>
   </>
 );

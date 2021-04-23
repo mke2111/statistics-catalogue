@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   loading: false,
-  stocks: [],
+  profile: [],
   error: '',
 };
 
@@ -19,14 +19,16 @@ const profileReducer = (state = initialState, action) => {
       };
     case STOCK_SUCCESS:
       return {
+        ...state,
         loading: false,
-        stocks: action.payload,
+        profile: action.payload,
         error: '',
       };
     case STOCK_FAILURE:
       return {
+        ...state,
         loading: false,
-        stocks: [],
+        profile: [],
         error: action.payload,
       };
     default: return state;
