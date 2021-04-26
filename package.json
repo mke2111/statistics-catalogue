@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "deep-freeze": "0.0.1",
     "font-awesome": "^4.7.0",
     "history": "^4.10.1",
     "prop-types": "^15.7.2",
@@ -21,7 +22,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "regenerator-runtime": "^0.13.7"
   },
   "scripts": {
     "start": "react-scripts start",

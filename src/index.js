@@ -1,19 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import reducer from './Reducers';
+import { createStore, applyMiddleware } from 'redux';
+import App from './components/App';
+import rootReducer from './reducers/index';
 import './index.css';
-import App from './App';
 
-const store = createStore(reducer, applyMiddleware(thunk));
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunk),
+);
+/*
+class Main extends React.Component {
+  componentDidMount() {
+    document.title = 'Crypto Catalog App';
+  }
+
+} */
+
+const Main = () => {
+  React.useEffect(() => {
+    document.title = 'Crypto Catalog App';
+  });
+
+  return (
+    <App />
+  );
+};
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <Main />
+  </Provider>,
   document.getElementById('root'),
 );
