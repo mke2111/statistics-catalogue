@@ -7,9 +7,9 @@ import MainAsset from '../components/MainAsset';
 import MainFilter from '../components/MainFilter';
 import CurrencyFilter from '../components/CurrencyFilter';
 import Paginator from '../components/Paginator';
-import { getInputHints, apiToKey } from '../helpers/componentHelp';
+import { apiToKey } from '../helpers/componentHelp';
 import style from '../styles/DashBoard.module.css';
-import { ReactComponent as SearchIcon } from '../assets/icons/search.svg';
+// import { ReactComponent as SearchIcon } from '../assets/icons/search.svg';
 import mainFilterCat from '../config/appConfig';
 
 import {
@@ -49,39 +49,38 @@ const RenderDashBoard = ({
   changeMainFilter,
   changeCurrencyFilter,
   handlePaginator,
-  changePage,
 }) => {
-  const [input, setInput] = React.useState('');
-  const [ks, setKs] = React.useState([{ name: '', idpos: null }]);
+  // const [input, setInput] = React.useState('');
+  // const [ks, setKs] = React.useState([{ name: '', idpos: null }]);
 
-  const handleInputSearch = (event) => {
-    setInput(event.target.value);
-    const hits = getInputHints(event.target.value, state.crypto);
-    setKs(hits); // update store
-    if (hits.length > 0) {
-      // calls method to change page store where the best hit asset is located.
-      changePage(hits[0].idpage);
-    } else {
-      changePage(1);
-    }
-  };
+  // const handleInputSearch = (event) => {
+  //   setInput(event.target.value);
+  //   const hits = getInputHints(event.target.value, state.crypto);
+  //   setKs(hits); // update store
+  //   if (hits.length > 0) {
+  //     // calls method to change page store where the best hit asset is located.
+  //     changePage(hits[0].idpage);
+  //   } else {
+  //     changePage(1);
+  //   }
+  // };
 
   const sortedAssetList = sortAssetsList(state.crypto, state.page, state.mainFilter);
-  const toggleSearchBox = () => {
-    const searchinput = document.getElementById('search-input');
-    if (searchinput.classList.contains('hide')) {
-      searchinput.classList.remove('hide');
-      searchinput.classList.add('show');
-    } else {
-      searchinput.classList.remove('show');
-      searchinput.classList.add('hide');
-    }
-  };
+  // const toggleSearchBox = () => {
+  //   const searchinput = document.getElementById('search-input');
+  //   if (searchinput.classList.contains('hide')) {
+  //     searchinput.classList.remove('hide');
+  //     searchinput.classList.add('show');
+  //   } else {
+  //     searchinput.classList.remove('show');
+  //     searchinput.classList.add('hide');
+  //   }
+  // };
 
   return (
     <>
-      <div>
-        <div className={`${style.searchContainer} hide`} id="search-input">
+      <div className="container all">
+        {/* <div className="as" id="search-input">
           <input type="text" value={input} list="keysearch" onChange={handleInputSearch} />
           <datalist id="keysearch">
             {
@@ -90,17 +89,19 @@ const RenderDashBoard = ({
               ))
             }
           </datalist>
+        </div> */}
+        <div className="d-flex flex-row justify-content-around">
+          <MainFilter
+            changeMainFilter={changeMainFilter}
+          />
+          <CurrencyFilter
+            state={state}
+            changeCurrencyFilter={changeCurrencyFilter}
+          />
+          {/* <SearchIcon className="pt-1" onClick={toggleSearchBox} /> */}
         </div>
-        <MainFilter
-          changeMainFilter={changeMainFilter}
-        />
-        <CurrencyFilter
-          state={state}
-          changeCurrencyFilter={changeCurrencyFilter}
-        />
-        <SearchIcon className={style.searchIcon} onClick={toggleSearchBox} />
         <Link
-          className={style.routerLink}
+          className="my-3"
           key={0}
           to={`/asset/${sortedAssetList[0].id}`}
         >
@@ -109,17 +110,13 @@ const RenderDashBoard = ({
             currency={state.currencyFilter}
           />
         </Link>
-        <div className={style.dashGap}>
-          <a className={style.myBrand} href="https://www.carlosanriquez.com">
-            <img src="https://img.shields.io/badge/Developed%20by-Carlos%20Anriquez-red" alt="carlos anriquez" />
-          </a>
+        <div className="d-flex flex-row justify-content-around">
           <p>
-            stats by
             {apiToKey(state.mainFilter, mainFilterCat)}
           </p>
           <Paginator page={state.page} handlePaginator={handlePaginator} />
         </div>
-        <ul className={style.dashAssets}>
+        <ul id="list">
           {
             sortedAssetList.map((asset, id) => (
               id !== 0
@@ -163,7 +160,6 @@ RenderDashBoard.propTypes = {
   changeMainFilter: PropTypes.func.isRequired,
   changeCurrencyFilter: PropTypes.func.isRequired,
   handlePaginator: PropTypes.func.isRequired,
-  changePage: PropTypes.func.isRequired,
 };
 
 export default DashBoard;

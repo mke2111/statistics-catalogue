@@ -4,10 +4,11 @@ import { PropTypes } from 'prop-types';
 import {
   BrowserRouter as Router, Route, Switch, Redirect,
 } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import DashBoard from '../container/DashBoard';
 import { updateApiRenderList } from '../actions/index';
 import AssetDetailsSafe from '../container/AssetDetailsSafe';
-import styles from '../styles/App.module.css';
+import '../index.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -47,11 +48,8 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div className={styles.appContainer}>
-          <h1 className={styles.brand}>CryptoLog</h1>
-          <a className={styles.myRepo} href="https://github.com/canriquez/react-redux-capstone">
-            <img src="https://img.shields.io/badge/Github-Repo-green" alt="repo" />
-          </a>
+        <div className="app-container d-flex flex-column m-auto">
+          <h1 className="text-center">Biit</h1>
           <Switch>
             <Route exact path="/" component={DashBoard} />
             {/*          <Route exact path='/asset' component={AssetDetails} /> */}

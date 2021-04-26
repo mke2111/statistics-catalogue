@@ -5,17 +5,15 @@ import { textToBigCurrency } from '../helpers/componentHelp';
 
 const DashAsset = ({
   asset,
-  boxId,
   currency,
 }) => (
 
   <li
     key={asset.id}
-    className={style.dashAsset
-        + ((boxId === 1 || boxId === 4) ? ` ${style.evenBox}` : ` ${style.oddBox}`)}
+    className="single-data"
   >
-    <div className={`${style.topBox} flexCenter`}>
-      <img src={asset.image} alt={asset.name} />
+    <div>
+      <img src={asset.image} alt={asset.name} className="single-image" />
     </div>
     <div className={`${style.downBox} flexColEnd`}>
       <h1>{asset.id}</h1>
@@ -36,7 +34,6 @@ DashAsset.propTypes = {
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
   }).isRequired,
-  boxId: PropTypes.number.isRequired,
   currency: PropTypes.string.isRequired,
 };
 

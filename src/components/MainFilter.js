@@ -1,6 +1,5 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import style from '../styles/MainFilter.module.css';
 import mainFilterCat from '../config/appConfig';
 
 const MainFilter = ({
@@ -12,7 +11,7 @@ const MainFilter = ({
 
   return (
 
-    <div className={style.mainFilter}>
+    <div className="s">
       <select className="categories" onChange={handleChange}>
         {
           mainFilterCat.map((cat, id) => (
