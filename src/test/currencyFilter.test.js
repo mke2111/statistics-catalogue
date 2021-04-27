@@ -8,7 +8,7 @@ it('update currency to new filtered currency', () => {
   const filter = 'eur';
   const stateAfter = 'eur';
 
-  /* inmmutability check */
+  /* immutability check */
   deepFreeze(stateBefore); // makes sure reducer is pure function
   deepFreeze(currencyUpdate); // makes sure reducer is pure function
 

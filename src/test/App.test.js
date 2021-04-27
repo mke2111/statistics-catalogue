@@ -13,7 +13,7 @@ const store = createStore(
 
 class Main extends React.Component {
   componentDidMount() {
-    document.title = 'Crypto Catalog App';
+    document.title = 'BiIt';
   }
 
   render() {

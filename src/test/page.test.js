@@ -7,7 +7,7 @@ it('increases page number, happy path', () => {
 
   const stateAfter = 1;
 
-  /* inmmutability check */
+  /* immutability check */
   deepFreeze(stateBefore); // makes sure reducer is pure function
   deepFreeze(nextPage); // makes sure reducer is pure function
 

@@ -8,7 +8,7 @@ it('update filter to new filter', () => {
   const filter = 'ath';
   const stateAfter = 'ath';
 
-  /* inmmutability check */
+  /* immutability check */
   deepFreeze(stateBefore); // makes sure reducer is pure function
   deepFreeze(filterUpdate); // makes sure reducer is pure function
 

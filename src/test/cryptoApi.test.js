@@ -12,7 +12,7 @@ it('fetch API Asset list update', () => {
     status: FETCHING_API_ASSETS,
   };
 
-  /* inmmutability check */
+  /* immutability check */
   deepFreeze(stateBefore); // makes sure reducer is pure function
   deepFreeze(fetchApiAssets); // makes sure reducer is pure function
 

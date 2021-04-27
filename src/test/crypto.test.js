@@ -30,7 +30,7 @@ it('updates crypto asset list', () => {
 
   /* inmmutability check */
   deepFreeze(stateBefore); // makes sure reducer is pure function
-  deepFreeze(updateAssetList); // makes sure reducer is pure function
+  deepFreeze(updateAssetList);
 
   expect(
     crypto(stateBefore, updateAssetList(assets)),
