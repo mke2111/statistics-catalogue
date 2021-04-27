@@ -25,8 +25,8 @@ const CurrencyFilter = ({
 
   return (
 
-    <div className="d">
-      <select className="categories" onChange={handleChange}>
+    <div>
+      <select onChange={handleChange}>
         {
           categories.map((cat, id) => (
             <option key={`opt_${id * 2}`} value={cat.api}>{cat.key}</option>

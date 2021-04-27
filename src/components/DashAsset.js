@@ -4,7 +4,6 @@ import { textToBigCurrency } from '../helpers/componentHelp';
 
 const DashAsset = ({
   asset,
-  // currency,
 }) => (
 
   <li
@@ -18,7 +17,11 @@ const DashAsset = ({
       <p className="text-white text-capitalize">{asset.id}</p>
       <div>
         <p>{`${textToBigCurrency(asset.market_cap)} `}</p>
-        {/* <p>{`  ${currency}`}</p> */}
+        <p>
+          Rank
+          {' '}
+          {asset.market_cap_rank}
+        </p>
       </div>
       <p className="text-uppercase">{asset.symbol}</p>
     </div>
@@ -29,11 +32,11 @@ DashAsset.propTypes = {
   asset: PropTypes.shape({
     id: PropTypes.string.isRequired,
     market_cap: PropTypes.number.isRequired,
+    market_cap_rank: PropTypes.number.isRequired,
     symbol: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
   }).isRequired,
-  // currency: PropTypes.string.isRequired,
 };
 
 export default DashAsset;

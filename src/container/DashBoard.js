@@ -8,7 +8,6 @@ import MainFilter from '../components/MainFilter';
 import CurrencyFilter from '../components/CurrencyFilter';
 import Paginator from '../components/Paginator';
 import { apiToKey } from '../helpers/componentHelp';
-// import { ReactComponent as SearchIcon } from '../assets/icons/search.svg';
 import mainFilterCat from '../config/appConfig';
 
 import {
@@ -36,7 +35,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const sortAssetsList = (object, page, property) => {
-  const itemsPerPage = 6;
+  const itemsPerPage = 10;
   const from = (itemsPerPage * page) - itemsPerPage;
   const to = (itemsPerPage * page);
   return object.sort((a, b) => b[property] - a[property]).slice(from, to);
@@ -49,46 +48,11 @@ const RenderDashBoard = ({
   changeCurrencyFilter,
   handlePaginator,
 }) => {
-  // const [input, setInput] = React.useState('');
-  // const [ks, setKs] = React.useState([{ name: '', idpos: null }]);
-
-  // const handleInputSearch = (event) => {
-  //   setInput(event.target.value);
-  //   const hits = getInputHints(event.target.value, state.crypto);
-  //   setKs(hits); // update store
-  //   if (hits.length > 0) {
-  //     // calls method to change page store where the best hit asset is located.
-  //     changePage(hits[0].idpage);
-  //   } else {
-  //     changePage(1);
-  //   }
-  // };
-
   const sortedAssetList = sortAssetsList(state.crypto, state.page, state.mainFilter);
-  // const toggleSearchBox = () => {
-  //   const searchinput = document.getElementById('search-input');
-  //   if (searchinput.classList.contains('hide')) {
-  //     searchinput.classList.remove('hide');
-  //     searchinput.classList.add('show');
-  //   } else {
-  //     searchinput.classList.remove('show');
-  //     searchinput.classList.add('hide');
-  //   }
-  // };
 
   return (
     <>
       <div className="container vh-100">
-        {/* <div className="as" id="search-input">
-          <input type="text" value={input} list="keysearch" onChange={handleInputSearch} />
-          <datalist id="keysearch">
-            {
-              ks.map((hint, id) => (
-                <option key={`hint-${id * 2}`}>{hint.name}</option>
-              ))
-            }
-          </datalist>
-        </div> */}
         <div className="d-flex flex-row justify-content-around pt-2">
           <MainFilter
             changeMainFilter={changeMainFilter}
@@ -98,7 +62,6 @@ const RenderDashBoard = ({
             state={state}
             changeCurrencyFilter={changeCurrencyFilter}
           />
-          {/* <SearchIcon className="pt-1" onClick={toggleSearchBox} /> */}
         </div>
         <Link
           key={0}
