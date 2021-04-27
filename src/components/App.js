@@ -19,25 +19,15 @@ class App extends React.Component {
     this.currencyFilter = currencyFilter;
     this.currentCryptoList = currentCryptoList;
     this.renderApiAssetsLists = renderApiAssetsLists;
-    // binding dispatchToProps method so is accesible by class methods
     this.renderApiAssetsLists = this.renderApiAssetsLists.bind(this);
   }
 
-  // Initial conf will be the initial state of a store reducer where we will update the
-  // selected filters
-  // API will be only called if currency has changed
-
   componentDidMount() {
     this.renderApiAssetsLists();
-    // Fix normal update every 10 minutes
     this.assetsListUpdateInterval = setInterval(this.fetchApi.bind(this), 600000);
   }
 
   componentWillUnmount() {
-    /*
-          stop fetchAi() from keep updating list when changing pages
-          on Unmount
-        */
     clearInterval(this.assetsListUpdateInterval);
   }
 
@@ -51,7 +41,6 @@ class App extends React.Component {
         <div className="app-container d-flex flex-column m-auto shadow-lg">
           <Switch>
             <Route exact path="/" component={DashBoard} />
-            {/*          <Route exact path='/asset' component={AssetDetails} /> */}
             <Route
               path="/asset/:id"
               render={(props) => (
