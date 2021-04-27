@@ -78,7 +78,7 @@ const RenderDashBoard = ({
 
   return (
     <>
-      <div className="container">
+      <div className="container vh-100">
         {/* <div className="as" id="search-input">
           <input type="text" value={input} list="keysearch" onChange={handleInputSearch} />
           <datalist id="keysearch">
@@ -109,13 +109,13 @@ const RenderDashBoard = ({
             currency={state.currencyFilter}
           />
         </Link>
-        <div className="d-flex flex-row justify-content-around">
+        <div className="d-flex flex-row justify-content-around m-0">
           <p>
             {apiToKey(state.mainFilter, mainFilterCat)}
           </p>
           <Paginator page={state.page} handlePaginator={handlePaginator} />
         </div>
-        <ul id="list" className="list-unstyled rounded">
+        <ul id="list" className="list-unstyled rounded mt-0">
           {
             sortedAssetList.map((asset, id) => (
               id !== 0
