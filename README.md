@@ -50,6 +50,8 @@ To use this app locally, this is what you need to:
 - Then `cd stat-catalogue` into the downloaded folder and run `npm install`
 - then, run `npm run start`.
 
+- Test the app with `yarn test --watchAll`
+
 ## Author
 
 👤 **Roy Mukuye**
