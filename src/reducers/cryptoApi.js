@@ -11,7 +11,7 @@ const defaultState = {
 
 const cryptoApi = (state = defaultState, action) => {
   switch (action.type) {
-    case FETCHING_API_ASSETS: // used to fetch the total book list
+    case FETCHING_API_ASSETS:
       return {
         fetching: true,
         updated: false,
@@ -26,7 +26,7 @@ const cryptoApi = (state = defaultState, action) => {
         apiError: false,
         status: action.type,
       };
-    case FETCHING_API_FAILURE: // Used to initiate a new book storage into API (POST Action)
+    case FETCHING_API_FAILURE:
       return {
         fetching: false,
         updated: false,

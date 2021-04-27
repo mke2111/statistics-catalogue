@@ -35,7 +35,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const sortAssetsList = (object, page, property) => {
-  const itemsPerPage = 10;
+  const itemsPerPage = 11;
   const from = (itemsPerPage * page) - itemsPerPage;
   const to = (itemsPerPage * page);
   return object.sort((a, b) => b[property] - a[property]).slice(from, to);

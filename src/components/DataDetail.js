@@ -18,12 +18,12 @@ const DataDetail = ({
   }
 
   return (
-    <div className="bg-transparent shadow-lg rounded d-flex flex-row justify-content-between w-75 mx-auto my-4 align-items-center px-3">
-      <div className="p-2">
+    <div className="bg-transparent shadow-lg rounded d-flex flex-row justify-content-between w-75 mx-auto my-3 align-items-center px-3">
+      <div className="p-3">
         <p>{keys[0]}</p>
         {keys[1] === null ? '' : <p>{k2}</p>}
       </div>
-      <div className="">
+      <div className="text-white text-uppercase">
         {keys[0] === 'Market Cap'
           ? <p>{textToBigCurrency(v1)}</p>
           : <p>{v1}</p>}

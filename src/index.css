@@ -1,29 +1,20 @@
 * {
   margin: 0;
   padding: 0;
-  /* background-color: rgb(120, 184, 240); */
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  z-index: 9;
 }
-
-/* Fonts for all componenets */
-
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 /* Generic classes */
 
-.app-container {
-  /* width: 1000px; */
+.app-container,
+body {
   background-color: rgb(108, 178, 240);
-  /* height: max-content; */
-  z-index: 1000;
 }
 
 .single-image {
   width: 100px;
-  height: fit-content;
 }
 
 .single-data {
@@ -36,6 +27,5 @@
   padding: 10px 25px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  /* grid-template-rows: auto; */
   gap: 15px;
 }

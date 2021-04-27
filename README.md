@@ -23,6 +23,15 @@ The application features includes:
 
 To try the live demo [click here](https://rcalculatorr.herokuapp.com/)
 
+### Built With
+
+This project was built using these technologies.
+
+- JavaScript
+- React/Redux
+- HTML/CSS3
+- Netlify ( For deployment)
+
 ## Installation
 
 > Make sure Node.js is running on your local machine
@@ -41,16 +50,6 @@ To use this app locally, this is what you need to:
 - Then `cd stat-catalogue` into the downloaded folder and run `npm install`
 - then, run `npm run start`.
 
-### Built With
-
-This project was built using these technologies.
-
-- React
-- Redux
-- JavaScript
-- CSS3
-- Netlify ( For deployment)
-
 ## Author
 
 👤 **Roy Mukuye**
@@ -58,8 +57,6 @@ This project was built using these technologies.
 - GitHub: [@mke2111](https://github.com/mke2111)
 - Twitter: [@Roymkenya](https://twitter.com/Roymkenya)
 - LinkedIn: [Roy Mukuye](https://www.linkedin.com/in/roy-mukuye-42b07b1b4)
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## Acknowledgements
 

@@ -20,8 +20,6 @@ const fetchApiCryptoList = async ({
   try {
     const response = await fetch(appURL, request);
     const obj = await response.json();
-
-    // return complete list
     return obj;
   } catch (err) {
     throw ('Something went wrong with fetching book list ', err);

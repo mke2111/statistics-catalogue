@@ -4,12 +4,10 @@ import cryptoDefault from './cryptoDefault';
 const crypto = (state = cryptoDefault, action) => {
   switch (action.type) {
     case UPDATE_ASSET_LIST:
-      // eslint-disable-next-line
       return [
         ...action.assetList,
       ];
     case UPDATE_CRYPTO_ASSET:
-      // eslint-disable-next-line
       return {
         ...action.assetData,
       };

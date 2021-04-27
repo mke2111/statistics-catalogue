@@ -81,8 +81,6 @@ const mapStateToProps = (state, match) => ({
 });
 
 AssetDetailsSafe.propTypes = {
-  /*   match: PropTypes.string.isRequired,
-    cmatch: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])).isRequired, */
   currentCryptoList: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])).isRequired,
   currencyFilter: PropTypes.string.isRequired,
   match: PropTypes.shape({
