@@ -1,11 +1,9 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import { getDate, isEven, textToBigCurrency } from '../helpers/componentHelp';
-import style from '../styles/DataDetail.module.css';
+import { getDate, textToBigCurrency } from '../helpers/componentHelp';
 
 const DataDetail = ({
   data,
-  idRow,
 }) => {
   let k2; let
     v1;
@@ -20,14 +18,12 @@ const DataDetail = ({
   }
 
   return (
-    <div className={style.dataDetailRow
-      + (isEven(idRow) ? ` ${style.evenBox}` : ` ${style.oddBox}`)}
-    >
-      <div className={style.detailKeys}>
+    <div className="bg-transparent shadow-lg rounded d-flex flex-row justify-content-between w-75 mx-auto my-4 align-items-center px-3">
+      <div className="p-2">
         <p>{keys[0]}</p>
         {keys[1] === null ? '' : <p>{k2}</p>}
       </div>
-      <div className={style.detailValue}>
+      <div className="">
         {keys[0] === 'Market Cap'
           ? <p>{textToBigCurrency(v1)}</p>
           : <p>{v1}</p>}
@@ -46,7 +42,6 @@ DataDetail.propTypes = {
     'High 24h': PropTypes.number,
     'Total Volume': PropTypes.number,
   }).isRequired,
-  idRow: PropTypes.number.isRequired,
 };
 
 export default DataDetail;
