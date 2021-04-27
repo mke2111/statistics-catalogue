@@ -8,7 +8,7 @@ In this project, I developed a frontend web application, catalogue of financial 
 
 <p align='center' class='d-flex'>
     <span align="">
-    <img  title='wave' alt='waving' src='./calcu.png'>
+    <img  title='wave' alt='screenshot' src='./calcu.png'>
   </span>
 </p>
 
@@ -21,7 +21,7 @@ The application features includes:
 
 ## Live Version
 
-To try the live demo [click here](https://rcalculatorr.herokuapp.com/)
+To try the live demo [click here](https://flamboyant-jang-398ec8.netlify.app)
 
 ### Built With
 
