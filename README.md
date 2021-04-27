@@ -1,44 +1,73 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Project: BiIt
 
-## Available Scripts
+> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), along with the redux template.
 
-In the project directory, you can run:
+In this project, I developed a frontend web application, catalogue of financial values using [Stock API](https://api.coingecko.com/en/api) and insert the data to my React/Redux Application.
 
-### `yarn start`
+<p align='center' class='d-flex'>
+    <span align="">
+    <img  title='wave' alt='waving' src='./calcu.png'>
+  </span>
+</p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The application features includes:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- List of Market capitalization, Circulating supply and 24hour exchange categories
+- Filter between those 3
+- Open individual stock item
+- Dynamic routes for individual stock item
 
-### `yarn test`
+## Live Version
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To try the live demo [click here](https://rcalculatorr.herokuapp.com/)
 
-### `yarn build`
+## About The Project
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> React - Calculator is a practice project, Built with React, JavaScript, CSS3. The use of class and functional components, state management, passing props have all been applied in the project.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> Make sure Node.js is running on your local machine
 
-### `yarn eject`
+To use this app locally, this is what you need to:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [Download](https://github.com/mke2111/statistics-catalogue.git) or clone this repo:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - Clone with HTTPS in the terminal.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  ```
+    git clone https://github.com/mke2111/statistics-catalogue.git
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  ```
 
-## Learn More
+- Then `cd stat-catalogue` into the downloaded folder and run `npm install`
+- then, run `npm run start`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Built With
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project was built using these technologies.
+
+- React
+- Redux
+- JavaScript
+- CSS3
+- Netlify ( For deployment)
+
+## Author
+
+👤 **Roy Mukuye**
+
+- GitHub: [@mke2111](https://github.com/mke2111)
+- Twitter: [@Roymkenya](https://twitter.com/Roymkenya)
+- LinkedIn: [Roy Mukuye](https://www.linkedin.com/in/roy-mukuye-42b07b1b4)
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## Acknowledgements
+
+- [Microverse](https://www.microverse.org/)
+- [Facebook - React](https://github.com/facebook/create-react-app)
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
