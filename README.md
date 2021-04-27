@@ -2,6 +2,8 @@
 
 > This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), along with the redux template.
 
+## About The Project
+
 In this project, I developed a frontend web application, catalogue of financial values using [Stock API](https://api.coingecko.com/en/api) and insert the data to my React/Redux Application.
 
 <p align='center' class='d-flex'>
@@ -20,10 +22,6 @@ The application features includes:
 ## Live Version
 
 To try the live demo [click here](https://rcalculatorr.herokuapp.com/)
-
-## About The Project
-
-> React - Calculator is a practice project, Built with React, JavaScript, CSS3. The use of class and functional components, state management, passing props have all been applied in the project.
 
 ## Installation
 
