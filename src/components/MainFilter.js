@@ -11,8 +11,8 @@ const MainFilter = ({
 
   return (
 
-    <div className="s">
-      <select className="categories" onChange={handleChange}>
+    <div>
+      <select onChange={handleChange}>
         {
           mainFilterCat.map((cat, id) => (
             <option key={`opt_${id * 2}`} value={cat.api}>{cat.key}</option>

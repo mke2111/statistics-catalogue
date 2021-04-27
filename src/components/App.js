@@ -49,7 +49,6 @@ class App extends React.Component {
     return (
       <Router>
         <div className="app-container d-flex flex-column m-auto">
-          <h1 className="text-center">Biit</h1>
           <Switch>
             <Route exact path="/" component={DashBoard} />
             {/*          <Route exact path='/asset' component={AssetDetails} /> */}

@@ -8,7 +8,6 @@ import MainFilter from '../components/MainFilter';
 import CurrencyFilter from '../components/CurrencyFilter';
 import Paginator from '../components/Paginator';
 import { apiToKey } from '../helpers/componentHelp';
-import style from '../styles/DashBoard.module.css';
 // import { ReactComponent as SearchIcon } from '../assets/icons/search.svg';
 import mainFilterCat from '../config/appConfig';
 
@@ -37,7 +36,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const sortAssetsList = (object, page, property) => {
-  const itemsPerPage = 5;
+  const itemsPerPage = 6;
   const from = (itemsPerPage * page) - itemsPerPage;
   const to = (itemsPerPage * page);
   return object.sort((a, b) => b[property] - a[property]).slice(from, to);
@@ -79,7 +78,7 @@ const RenderDashBoard = ({
 
   return (
     <>
-      <div className="container all">
+      <div className="container">
         {/* <div className="as" id="search-input">
           <input type="text" value={input} list="keysearch" onChange={handleInputSearch} />
           <datalist id="keysearch">
@@ -90,10 +89,11 @@ const RenderDashBoard = ({
             }
           </datalist>
         </div> */}
-        <div className="d-flex flex-row justify-content-around">
+        <div className="d-flex flex-row justify-content-around pt-2">
           <MainFilter
             changeMainFilter={changeMainFilter}
           />
+          <h3 className="text-center text-muted">BiIt</h3>
           <CurrencyFilter
             state={state}
             changeCurrencyFilter={changeCurrencyFilter}
@@ -101,7 +101,6 @@ const RenderDashBoard = ({
           {/* <SearchIcon className="pt-1" onClick={toggleSearchBox} /> */}
         </div>
         <Link
-          className="my-3"
           key={0}
           to={`/asset/${sortedAssetList[0].id}`}
         >
@@ -116,7 +115,7 @@ const RenderDashBoard = ({
           </p>
           <Paginator page={state.page} handlePaginator={handlePaginator} />
         </div>
-        <ul id="list">
+        <ul id="list" className="list-unstyled rounded">
           {
             sortedAssetList.map((asset, id) => (
               id !== 0
@@ -124,7 +123,6 @@ const RenderDashBoard = ({
                   <React.Fragment key={asset.id}>
 
                     <Link
-                      className={style.routerLink}
                       to={`/asset/${asset.id}`}
                     >
                       <DashAsset
