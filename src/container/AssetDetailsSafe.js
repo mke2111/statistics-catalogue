@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import DataDetail from '../components/DataDetail';
-import style from '../styles/AssetDetailsSafe.module.css';
 import { textToBigCurrency } from '../helpers/componentHelp';
 import { ReactComponent as GoBack } from '../assets/icons/pagePrev.svg';
 
@@ -32,25 +31,27 @@ const AssetDetailsSafe = ({
           pathname: '/',
         }}
         >
-          <GoBack className={style.goBack} />
+          <GoBack className="border rounded border-dark ml-5 mt-3 p-1" />
         </Link>
-        <div className={style.mainAsset}>
-          <div className={`${style.leftBox} flexCenter`}>
-            <img src={asset.image} alt={asset.name} />
+        <div className="d-flex flex-row justify-content-around py-2 w-75 m-auto shadow-lg">
+          <div>
+            <img src={asset.image} alt={asset.name} className="single-image" />
           </div>
-          <div className={`${style.rightBox} flexCol`}>
-            <h1>{asset.id}</h1>
-            <div className={style.marketCap}>
-              <h2>{`${textToBigCurrency(asset.current_price)} `}</h2>
-              <span>{currencyFilter}</span>
+          <div className="">
+            <h1 className="text-capitalize text-white">{asset.id}</h1>
+            <div className="">
+              <h2>
+                {`${textToBigCurrency(asset.current_price)} `}
+                {'   '}
+                <span className="text-uppercase text-white">{currencyFilter}</span>
+              </h2>
             </div>
           </div>
         </div>
-        <div className={style.dashGap}>
-          <p>
-            Crypto currency details | ticker:
+        <div className="w-75 m-auto text-white text-uppercase">
+          <h4>
             {asset.symbol}
-          </p>
+          </h4>
         </div>
         <ul>
           {
@@ -67,7 +68,7 @@ const AssetDetailsSafe = ({
   }
 
   return (
-    <div className="asset-details-box">
+    <div className="asset-detais-box">
       {assetRender}
     </div>
   );
