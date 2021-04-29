@@ -1,4 +1,4 @@
-# Project: BiIt
+# Catalogue of Statistics: BiIt
 
 > This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), along with the redux template.
 

@@ -5,9 +5,9 @@ import {
   BrowserRouter as Router, Route, Switch, Redirect,
 } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import DashBoard from '../container/DashBoard';
+import DashBoard from './DashBoard';
 import { updateApiRenderList } from '../actions/index';
-import AssetDetailsSafe from '../container/AssetDetailsSafe';
+import AssetDetailsSafe from './AssetDetailsSafe';
 import '../index.css';
 
 class App extends React.Component {
