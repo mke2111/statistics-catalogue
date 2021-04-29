@@ -23,6 +23,10 @@ The application features includes:
 
 To try the live demo [click here](https://flamboyant-jang-398ec8.netlify.app)
 
+## Presentation
+
+[Video](https://www.loom.com/share/b4ebfd2cb3424055834f3eba09757a2a)
+
 ### Built With
 
 This project was built using these technologies.
