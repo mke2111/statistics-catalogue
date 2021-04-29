@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Display component with snapshot Renders Display component correctly 1`] = `
+<div>
+  <select
+    onChange={[Function]}
+  >
+    <option
+      value="market_cap"
+    >
+      Market Cap
+    </option>
+    <option
+      value="circulating_supply"
+    >
+      Circulating Supply
+    </option>
+    <option
+      value="ath_change_percentage"
+    >
+      24h change vs ATH%
+    </option>
+  </select>
+</div>
+`;

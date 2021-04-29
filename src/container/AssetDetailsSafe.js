@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
@@ -56,7 +57,6 @@ const AssetDetailsSafe = ({
         <ul>
           {
             showData.map((data, id) => (
-              // eslint-disable-next-line
               <DataDetail idRow={id} key={id * 2} data={data} />
             ))
           }

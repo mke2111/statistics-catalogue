@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
@@ -47,7 +48,6 @@ class App extends React.Component {
                 <AssetDetailsSafe
                   currency={this.currencyFilter}
                   data={this.currentCryptoList}
-                  // eslint-disable-next-line
                   {...props}
                 />
               )}
