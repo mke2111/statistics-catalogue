@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { ReactComponent as PagePrev } from '../assets/icons/pagePrev.svg';
@@ -9,27 +8,27 @@ const Paginator = ({
   page,
 }) => (
   <div className="d-flex flex-row justify-content-between">
-    <a
-      role="button"
+    <button
+      type="button"
       href="#"
       className="pb-3 mx-3"
       onClick={() => handlePaginator('PREV')}
     >
       <PagePrev className="kk" />
-    </a>
+    </button>
     <p>
       Next Pg
       {' '}
       {page}
     </p>
-    <a
-      role="button"
+    <button
+      type="button"
       href="#"
       className="mx-3"
       onClick={() => handlePaginator('NEXT')}
     >
       <PageNext className="kk" />
-    </a>
+    </button>
   </div>
 );
 
