@@ -6,8 +6,6 @@
   -moz-box-sizing: border-box;
 }
 
-/* Generic classes */
-
 .app-container,
 body {
   background-color: rgb(108, 178, 240);
