@@ -12,20 +12,20 @@ const Paginator = ({
     <a
       role="button"
       href="#"
-      className="pb-3 mx-5"
+      className="pb-3 mx-3"
       onClick={() => handlePaginator('PREV')}
     >
       <PagePrev className="kk" />
     </a>
     <p>
-      Next Page
+      Next Pg
       {' '}
       {page}
     </p>
     <a
       role="button"
       href="#"
-      className="mx-5"
+      className="mx-3"
       onClick={() => handlePaginator('NEXT')}
     >
       <PageNext className="kk" />

@@ -6,9 +6,9 @@ const MainAsset = ({
   asset,
 }) => (
 
-  <div className="d-flex flex-row justify-content-around align-items-center shadow-lg bg-body rounded w-75 m-auto p-2">
+  <div className="d-flex flex-row justify-content-around align-items-center shadow-lg container-md bg-body rounded w-7 m-auto p-2">
     <div>
-      <img src={asset.image} alt={asset.name} className="single-image ml-5" />
+      <img src={asset.image} alt={asset.name} className="single-image img-fluid" />
     </div>
     <div className="d-flex flex-column px-5 text-center shadow-lg bg-body rounded">
       <h6 className="text-white text-capitalize">{asset.id}</h6>
