@@ -25,7 +25,8 @@ To try the live demo [click here](https://flamboyant-jang-398ec8.netlify.app)
 
 ## Presentation
 
-[Video](https://www.loom.com/share/b4ebfd2cb3424055834f3eba09757a2a)
+[UI & General app presentation](https://www.loom.com/share/b4ebfd2cb3424055834f3eba09757a2a)
+[React/Redux specific presentaion](https://www.loom.com/share/48a79d60c61d4be3a6c6f506a2aa2633)
 
 ### Built With
 

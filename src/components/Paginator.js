@@ -11,7 +11,7 @@ const Paginator = ({
     <button
       type="button"
       href="#"
-      className="pb-3 mx-3"
+      className="pb-2 mx-3 bg-transparent border-0"
       onClick={() => handlePaginator('PREV')}
     >
       <PagePrev className="kk" />
@@ -24,7 +24,7 @@ const Paginator = ({
     <button
       type="button"
       href="#"
-      className="mx-3"
+      className="mx-3 pb-2 bg-transparent  border-0"
       onClick={() => handlePaginator('NEXT')}
     >
       <PageNext className="kk" />
